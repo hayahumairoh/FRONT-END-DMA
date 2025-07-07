@@ -11,7 +11,7 @@
 
     <aside class="sidebar">
         <div class="sidebar-header">
-            <a href="/" class="brand-link active">
+            <a href="/" class="brand-link">
                 <div class="logo-placeholder"></div>
                 <span class="app-name">[App Name]</span>
             </a>
@@ -20,7 +20,7 @@
         <nav class="sidebar-nav">
             <ul>
                 <li>
-                    <a href="/" class="active">
+                    <a href="/" class="{{ Request::is('/') ? 'active' : '' }}">
                         <span class="nav-icon"></span>
                         <span>Main Menu</span>
                     </a>
@@ -42,6 +42,7 @@
     </aside>
 
     <main class="main-content">
+        @include('layout.header')
         @yield('content')
     </main>
 
