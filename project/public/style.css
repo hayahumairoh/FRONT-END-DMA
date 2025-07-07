@@ -110,3 +110,52 @@ body {
   text-decoration: none; /* Optional: removes the underline from the link */
   color: inherit; /* Optional: makes the link text use the parent's color */
 }
+
+.main-content {
+    padding: 20px;
+}
+
+.top-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notification-bell {
+    position: relative;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.notification-bell svg {
+    width: 24px;
+    height: 24px;
+    color: #495057;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-profile span {
+    font-weight: 500;
+    font-size: 15px;
+    color: #343a40;
+}
+
+.user-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #e9ecef;
+}
