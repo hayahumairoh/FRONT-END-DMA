@@ -1,0 +1,268 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.assessment-container {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+.left-section {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.box {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.box-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.table-section label {
+    display: block;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.table-section input {
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* === TABEL FORMAT RAPI === */
+.table-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    table-layout: fixed;
+}
+
+.table-section th,
+.table-section td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    word-wrap: break-word;
+}
+
+.table-section th:nth-child(1),
+.table-section td:nth-child(1) { width: 14%; }
+
+.table-section th:nth-child(2),
+.table-section td:nth-child(2) { width: 18%; }
+
+.table-section th:nth-child(3),
+.table-section td:nth-child(3) { width: 12%; }
+
+.table-section th:nth-child(4),
+.table-section td:nth-child(4) { width: 6%; }
+
+.table-section th:nth-child(5),
+.table-section td:nth-child(5) { width: 20%; }
+
+.table-section th:nth-child(6),
+.table-section td:nth-child(6) { width: 30%; }
+
+.save-button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.save-button {
+    padding: 6px 12px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.data-owner .form-group {
+    margin-bottom: 12px;
+}
+
+.data-owner input,
+.data-owner select {
+    width: 100%;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.note {
+    font-size: 0.8em;
+    color: #555;
+}
+
+.history-entry {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.history-entry .dot {
+    width: 14px;
+    height: 14px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+.history-entry .text {
+    font-size: 0.9em;
+}
+
+.section-divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+/* === WORKFLOW === */
+.workflow-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 10px;
+    margin-left: 8px;
+    position: relative;
+}
+
+.workflow-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    position: relative;
+    padding-bottom: 24px;
+}
+
+.workflow-step .circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid #000;
+    background-color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.workflow-step .line {
+    position: absolute;
+    top: 0;
+    left: calc(8px + 3px);
+    width: 2px;
+    height: 100%;
+    background-color: #ccc;
+    z-index: 1;
+}
+
+.workflow-step:last-child .line {
+    display: none;
+}
+
+.workflow-step.pending .circle {
+    border-color: #ccc;
+    background-color: #f2f2f2;
+}
+
+.workflow-step.approved .circle {
+    border-color: green;
+    background-color: #e6ffe6;
+}
+
+.workflow-step.in-progress .circle {
+    border-color: orange;
+    background-color: #fff3e6;
+}
+
+.workflow-step.rejected .circle {
+    border-color: red;
+    background-color: #ffe6e6;
+}
+
+/* === BUTTON ACTION === */
+.action-cell {
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+.action-buttons {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.approve-button,
+.reject-button {
+    padding: 6px 12px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 0.85em;
+    cursor: pointer;
+    width: 80px;
+    text-align: center;
+}
+
+
+.dropdown-wrapper {
+    position: relative;
+    width: 80px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+    display: none;
+    z-index: 10;
+    width: max-content;
+    min-width: 160px;
+    padding: 4px 0;
+}
+
+.dropdown-option {
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.dropdown-option:hover {
+    background-color: #f0f0f0;
+}
+
+.other-input {
+    margin: 6px 12px;
+    width: calc(100% - 24px);
+    padding: 6px;
+    font-size: 0.85em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
